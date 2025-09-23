@@ -1,0 +1,57 @@
+{
+  "name": "@nextorders/avatar-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.17.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextorders/avatar.git"
+  },
+  "engines": {
+    "node": ">=22.14.0",
+    "pnpm": ">=10.17.0"
+  },
+  "scripts": {
+    "release": "changelogen-monorepo --release --push",
+    "build": "pnpm -r run build",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "clean": "pnpm -r run clean",
+    "clean:modules": "pnpm -r run clean:modules && rm -rf node_modules",
+    "typecheck": "pnpm -r run typecheck",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "check:full": "pnpm run lint:fix && pnpm run typecheck && pnpm vitest run",
+    "prepare": "husky",
+    "prepare:cert": "mkdir -p .cert && mkcert -key-file ./.cert/localhost-key.pem -cert-file ./.cert/localhost.pem 'app.local'"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "catalog:dev",
+    "@commitlint/cli": "catalog:dev",
+    "@commitlint/config-conventional": "catalog:dev",
+    "@vitest/browser": "catalog:test",
+    "@vitest/coverage-v8": "catalog:test",
+    "changelogen-monorepo": "catalog:dev",
+    "eslint": "catalog:dev",
+    "husky": "catalog:dev",
+    "lint-staged": "catalog:dev",
+    "playwright": "catalog:test",
+    "typescript": "catalog:dev",
+    "vite": "catalog:dev",
+    "vitest": "catalog:test",
+    "vitest-browser-vue": "catalog:test",
+    "vue-tsc": "catalog:dev"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md,json}": [
+      "eslint --cache --fix"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

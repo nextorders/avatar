@@ -1,0 +1,49 @@
+{
+  // https://www.totaltypescript.com/tsconfig-cheat-sheet
+  "compilerOptions": {
+    "target": "es2022",
+    /* If your code runs in the DOM: */
+    "lib": [
+      "es2022",
+      "webworker",
+      "dom",
+      "dom.iterable"
+    ],
+    "moduleDetection": "force",
+    /* If NOT transpiling with TypeScript: */
+    "module": "preserve",
+    "paths": {
+      "#app": [
+        "./packages/nuxt/src/app/index"
+      ],
+      "#app/*": [
+        "./packages/nuxt/src/app/*"
+      ],
+      "#unhead/composables": [
+        "./packages/nuxt/src/head/runtime/composables"
+      ]
+    },
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    /* Strictness */
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true,
+    /* Base options: */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "noUncheckedSideEffectImports": true
+  },
+  "exclude": [
+    "**/dist/**",
+    "**/examples/**",
+    "**/docs/**",
+    "**/playground/**",
+    "**/test/unit/**"
+  ]
+}

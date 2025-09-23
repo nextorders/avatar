@@ -1,0 +1,38 @@
+{
+  "name": "@nextorders/avatar",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "A toolkit for generating personalized SVG avatars",
+  "license": "MIT",
+  "homepage": "https://avatar.nextorders.ru",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextorders/avatar.git",
+    "directory": "packages/avatar"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.12.0"
+  },
+  "scripts": {
+    "prepack": "unbuild"
+  },
+  "dependencies": {
+    "@dicebear/core": "9.2.4",
+    "@dicebear/open-peeps": "9.2.4"
+  },
+  "devDependencies": {
+    "unbuild": "catalog:dev"
+  }
+}
