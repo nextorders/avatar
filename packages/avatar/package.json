@@ -10,6 +10,12 @@
     "url": "git+https://github.com/nextorders/avatar.git",
     "directory": "packages/avatar"
   },
+  "keywords": [
+    "avatar",
+    "generator",
+    "svg",
+    "nextorders"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
