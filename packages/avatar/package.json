@@ -22,9 +22,6 @@
   "files": [
     "dist"
   ],
-  "engines": {
-    "node": ">=18.12.0"
-  },
   "scripts": {
     "build": "unbuild",
     "prepack": "pnpm run build"
