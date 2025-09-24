@@ -22,8 +22,7 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.mjs"
     },
-    "./package.json": "./package.json",
-    "./README.md": "./../../README.md"
+    "./package.json": "./package.json"
   },
   "types": "./dist/index.d.ts",
   "files": [
