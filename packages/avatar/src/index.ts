@@ -1,8 +1,7 @@
-import type { StyleOptions } from '@dicebear/core'
-import type { Options as BaseOptions } from '@dicebear/open-peeps'
-import { createAvatar as createBaseAvatar } from '@dicebear/core'
-import * as openPeeps from '@dicebear/open-peeps'
+import type { Options as BaseOptions, StyleOptions } from './open-peeps/types'
 import { addBackground } from './background'
+import { createAvatar as createBaseAvatar } from './core'
+import * as openPeeps from './open-peeps'
 import { getRandInteger } from './random'
 
 export type AvatarOptions = {

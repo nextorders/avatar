@@ -113,14 +113,10 @@ importers:
         version: 3.0.8(typescript@5.9.2)
 
   packages/avatar:
-    dependencies:
-      '@dicebear/core':
-        specifier: 9.2.4
-        version: 9.2.4
-      '@dicebear/open-peeps':
-        specifier: 9.2.4
-        version: 9.2.4(@dicebear/core@9.2.4)
     devDependencies:
+      '@types/json-schema':
+        specifier: 7.0.15
+        version: 7.0.15
       unbuild:
         specifier: catalog:dev
         version: 3.6.1(typescript@5.9.2)(vue-tsc@3.0.8(typescript@5.9.2))(vue@3.5.21(typescript@5.9.2))
@@ -292,16 +288,6 @@ packages:
   '@commitlint/types@19.8.1':
     resolution: {integrity: sha512-/yCrWGCoA1SVKOks25EGadP9Pnj0oAIHGpl2wH2M2Y46dPM2ueb8wyCVOD7O3WCTkaJ0IkKvzhl1JY7+uCT2Dw==}
     engines: {node: '>=v18'}
-
-  '@dicebear/core@9.2.4':
-    resolution: {integrity: sha512-hz6zArEcUwkZzGOSJkWICrvqnEZY7BKeiq9rqKzVJIc1tRVv0MkR0FGvIxSvXiK9TTIgKwu656xCWAGAl6oh+w==}
-    engines: {node: '>=18.0.0'}
-
-  '@dicebear/open-peeps@9.2.4':
-    resolution: {integrity: sha512-s6nwdjXFsplqEI7imlsel4Gt6kFVJm6YIgtZSpry0UdwDoxUUudei5bn957j9lXwVpVUcRjJW+TuEKztYjXkKQ==}
-    engines: {node: '>=18.0.0'}
-    peerDependencies:
-      '@dicebear/core': ^9.0.0
 
   '@es-joy/jsdoccomment@0.50.2':
     resolution: {integrity: sha512-YAdE/IJSpwbOTiaURNCKECdAwqrJuFiZhylmesBcIRawtYKnBR2wxPhoIewMg+Yu+QuYvHfJNReWpoxGBKOChA==}
@@ -3381,14 +3367,6 @@ snapshots:
     dependencies:
       '@types/conventional-commits-parser': 5.0.1
       chalk: 5.6.2
-
-  '@dicebear/core@9.2.4':
-    dependencies:
-      '@types/json-schema': 7.0.15
-
-  '@dicebear/open-peeps@9.2.4(@dicebear/core@9.2.4)':
-    dependencies:
-      '@dicebear/core': 9.2.4
 
   '@es-joy/jsdoccomment@0.50.2':
     dependencies:

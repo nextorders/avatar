@@ -33,11 +33,8 @@
     "build": "unbuild",
     "prepack": "pnpm run build"
   },
-  "dependencies": {
-    "@dicebear/core": "9.2.4",
-    "@dicebear/open-peeps": "9.2.4"
-  },
   "devDependencies": {
+    "@types/json-schema": "7.0.15",
     "unbuild": "catalog:dev"
   }
 }

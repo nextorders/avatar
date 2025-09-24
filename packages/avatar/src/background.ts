@@ -19,10 +19,6 @@ function generateHSL() {
   return [backgroundColor1, backgroundColor2]
 }
 
-function clearSvg(svg: string) {
-  return svg.replaceAll(/<metadata.*?<\/metadata>/gis, '')
-}
-
 export function addBackground(svg: string) {
   // Dynamic Background
   const [backgroundColor1, backgroundColor2] = generateHSL()
@@ -36,5 +32,5 @@ export function addBackground(svg: string) {
 
   const svgWithBackground = svg.replace(/<g transform/, `${gradient} $&`)
 
-  return clearSvg(svgWithBackground)
+  return svgWithBackground
 }
