@@ -1,6 +1,6 @@
 {
   "name": "@nextorders/avatar-monorepo",
-  "version": "0.1.0-alpha.4",
+  "version": "1.0.0-alpha.1",
   "private": true,
   "packageManager": "pnpm@10.17.0",
   "license": "MIT",
