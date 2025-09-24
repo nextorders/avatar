@@ -31,8 +31,7 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "prepack": "pnpm run copy:readme && pnpm run build",
-    "copy:readme": "cp ../../README.md ./README.md"
+    "prepack": "pnpm run build"
   },
   "dependencies": {
     "@dicebear/core": "9.2.4",
