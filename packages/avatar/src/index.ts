@@ -1,20 +1,32 @@
 import type { Options, StyleOptions } from './core/types'
 import type { OpenPeepsOptions } from './open-peeps'
-import { addBackground } from './background'
 import { createAvatar as createBaseAvatar } from './core'
 import * as openPeeps from './open-peeps'
 import { getRandInteger } from './random'
 
 export type AvatarOptions = {
-  seed?: string
+  seed: string
   gender?: Gender
   clothing?: 'amber' | 'green' | 'blue' | 'teal' | 'pink' | 'violet'
   emotion?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10
 }
 
+/**
+ * Create an avatar
+ * @returns SVG string
+ *
+ * @example
+ * ```
+ * createAvatar({
+ *   seed: 'random',
+ *   gender: 'female',
+ *   clothing: 'blue',
+ *   emotion: 10,
+ * })
+ * ```
+ */
 export function createAvatar(options: AvatarOptions): string {
-  const svg = createBaseAvatar(openPeeps, getOptions(options)).toString()
-  return addBackground(svg)
+  return createBaseAvatar(openPeeps, getOptions(options)).toString()
 }
 
 function getOptions(data: AvatarOptions): Partial<Options> {

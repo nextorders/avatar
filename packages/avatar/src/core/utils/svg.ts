@@ -1,4 +1,5 @@
 import type { BackgroundType, StyleCreateResult } from '../types'
+import { generateHarmoniousBackgroundColors } from './color'
 import { xml } from './escape'
 import { create as createPrng } from './prng'
 
@@ -29,21 +30,31 @@ export function addBackground(
 
   const solidBackground = `<rect fill="${primaryColor}" width="${width}" height="${height}" x="${x}" y="${y}" />`
 
+  function getGradient() {
+    if (type === 'randomGradientLinear') {
+      const [randomPrimaryColor, randomSecondaryColor] = generateHarmoniousBackgroundColors()
+      primaryColor = randomPrimaryColor
+      secondaryColor = randomSecondaryColor
+    }
+
+    return (
+      `<rect fill="url(#backgroundLinear)" width="${width}" height="${height}" x="${x}" y="${y}" />`
+      + `<defs>`
+      + `<linearGradient id="backgroundLinear" gradientTransform="rotate(${rotation} 0.5 0.5)">`
+      + `<stop stop-color="${primaryColor}"/>`
+      + `<stop offset="1" stop-color="${secondaryColor}"/>`
+      + `</linearGradient>`
+      + `</defs>`
+    )
+  }
+
   switch (type) {
     case 'solid':
       return solidBackground + result.body
 
     case 'gradientLinear':
-      return (
-        `<rect fill="url(#backgroundLinear)" width="${width}" height="${height}" x="${x}" y="${y}" />`
-        + `<defs>`
-        + `<linearGradient id="backgroundLinear" gradientTransform="rotate(${rotation} 0.5 0.5)">`
-        + `<stop stop-color="${primaryColor}"/>`
-        + `<stop offset="1" stop-color="${secondaryColor}"/>`
-        + `</linearGradient>`
-        + `</defs>${
-          result.body}`
-      )
+    case 'randomGradientLinear':
+      return getGradient() + result.body
   }
 }
 

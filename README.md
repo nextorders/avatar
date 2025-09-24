@@ -22,7 +22,7 @@ To generate an avatar, call the `createAvatar()` function and pass the options:
 
 ```typescript
 type AvatarOptions = {
-  seed?: string
+  seed: string
   gender?: Gender
   clothing?: 'amber' | 'green' | 'blue' | 'teal' | 'pink' | 'violet'
   emotion?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10

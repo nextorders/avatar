@@ -13,7 +13,7 @@ export function createAvatar<O extends object>(
   const prng = createPrng(options.seed)
   const result = style.create({ prng, options })
 
-  const backgroundType = prng.pick(options.backgroundType ?? []) ?? 'solid'
+  const backgroundType = prng.pick(options.backgroundType ?? []) ?? 'randomGradientLinear'
   const {
     primary: primaryBackgroundColor,
     secondary: secondaryBackgroundColor,
@@ -54,8 +54,8 @@ export function createAvatar<O extends object>(
   }
 
   if (
-    primaryBackgroundColor !== 'transparent'
-    && secondaryBackgroundColor !== 'transparent'
+    backgroundType === 'randomGradientLinear'
+    || (primaryBackgroundColor !== 'transparent' && secondaryBackgroundColor !== 'transparent')
   ) {
     result.body = svgUtils.addBackground(
       result,

@@ -66,4 +66,4 @@ export interface StyleCreateResult {
   extra?: () => Record<string, unknown>
 }
 
-export type BackgroundType = 'solid' | 'gradientLinear'
+export type BackgroundType = 'solid' | 'gradientLinear' | 'randomGradientLinear'
