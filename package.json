@@ -1,6 +1,6 @@
 {
   "name": "@nextorders/avatar-monorepo",
-  "version": "0.0.1-alpha.2",
+  "version": "0.1.0-alpha.1",
   "private": true,
   "packageManager": "pnpm@10.17.0",
   "license": "MIT",
@@ -17,7 +17,6 @@
     "build:types": "vue-tsc --emitDeclarationOnly",
     "release": "bumpp --execute=\"npm run release:prepare\" --recursive",
     "release:prepare": "npm run build:types",
-    "publish:ci": "tsx scripts/publish.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "clean": "pnpm -r run clean",
