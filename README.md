@@ -1,6 +1,6 @@
 # Avatar 👩‍🎨
 
-[![npm version](https://badge.fury.io/js/%40nextorders%2Favatar.svg)](https://badge.fury.io/js/%40nextorders%2Favatar)
+[![npm version](https://badge.fury.io/js/%40nextorders%2Favatar.svg)](https://www.npmjs.com/package/@nextorders/avatar)
 
 The `@nextorders/avatar` package allows you to easily generate SVG avatars.
 

@@ -22,7 +22,8 @@
       "import": "./dist/index.mjs",
       "require": "./dist/index.mjs"
     },
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./README.md": "./README.md"
   },
   "types": "./dist/index.d.ts",
   "files": [
@@ -30,7 +31,8 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "prepack": "pnpm run build"
+    "prepack": "pnpm run copy:readme && pnpm run build",
+    "copy:readme": "cp ../../README.md ./README.md"
   },
   "dependencies": {
     "@dicebear/core": "9.2.4",

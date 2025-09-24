@@ -12,6 +12,7 @@ indexes.json
 node_modules
 cache
 packages/*/LICENSE
+packages/*/README.md
 packages/contributing.md
 packages/public/badge-*
 packages/**/*.js
