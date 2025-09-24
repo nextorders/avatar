@@ -35,7 +35,9 @@ jobs:
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-      - run: pnpm run publish:ci
+      
+      - name: Publish 🚀
+        shell: bash
+        run: pnpm publish -r --access public --no-git-checks
         env:
-          NODE_OPTIONS: --max-old-space-size=6144
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
