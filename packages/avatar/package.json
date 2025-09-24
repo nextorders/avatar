@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "A toolkit for generating personalized SVG avatars",
   "license": "MIT",
-  "homepage": "https://avatar.nextorders.ru",
+  "homepage": "https://nextorders.ru/avatar",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nextorders/avatar.git",
