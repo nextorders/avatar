@@ -1,4 +1,4 @@
-import type { Result, Style, StyleOptions } from '../open-peeps/types'
+import type { Result, Style, StyleOptions } from './types'
 import { getBackgroundColors } from './utils/color'
 import { merge as mergeOptions } from './utils/options'
 import { create as createPrng } from './utils/prng'
@@ -13,7 +13,7 @@ export function createAvatar<O extends object>(
   const prng = createPrng(options.seed)
   const result = style.create({ prng, options })
 
-  const backgroundType = prng.pick(options.backgroundType ?? [], 'solid')
+  const backgroundType = prng.pick(options.backgroundType ?? []) ?? 'solid'
   const {
     primary: primaryBackgroundColor,
     secondary: secondaryBackgroundColor,

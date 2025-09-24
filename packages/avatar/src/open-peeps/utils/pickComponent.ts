@@ -1,4 +1,5 @@
-import type { ComponentGroupCollectionKey, ComponentPick, Prng } from '../types'
+import type { Prng } from '../../core/types'
+import type { ComponentGroupCollectionKey, ComponentPick } from '../types'
 import * as componentCollection from '../components'
 
 type Props = {

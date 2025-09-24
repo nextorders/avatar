@@ -1,4 +1,5 @@
-import type { Options as BaseOptions, StyleOptions } from './open-peeps/types'
+import type { Options, StyleOptions } from './core/types'
+import type { OpenPeepsOptions } from './open-peeps'
 import { addBackground } from './background'
 import { createAvatar as createBaseAvatar } from './core'
 import * as openPeeps from './open-peeps'
@@ -30,17 +31,6 @@ function getOptions(data: AvatarOptions): Partial<Options> {
     clothingColor: chooseClothingColor(data.clothing),
     ...choosePartsByGender(data.gender),
   }
-}
-
-interface Options extends StyleOptions<BaseOptions> {
-  seed?: string
-  flip?: boolean
-  rotate?: number
-  scale?: number
-  radius?: number
-  size?: number
-  translateX?: number
-  translateY?: number
 }
 
 type PossibleEmotion
@@ -80,7 +70,7 @@ const emotions: PossibleEmotion[] = [
   'lovingGrin1',
 ]
 
-const allFaces: BaseOptions['face'] = [
+const allFaces: OpenPeepsOptions['face'] = [
   ...emotions,
   'suspicious',
   'contempt',
@@ -109,7 +99,7 @@ const availableClothingColors = [
   { name: 'violet', color: 'c4b5fd' },
 ]
 
-const male: Partial<StyleOptions<Options>> = {
+const male: Partial<StyleOptions<OpenPeepsOptions>> = {
   head: [
     'afro', // unisex
     'dreads1', // unisex
@@ -155,7 +145,7 @@ const male: Partial<StyleOptions<Options>> = {
   ],
 }
 
-const female: Partial<StyleOptions<Options>> = {
+const female: Partial<StyleOptions<OpenPeepsOptions>> = {
   facialHairProbability: 0,
   head: [
     'afro', // unisex

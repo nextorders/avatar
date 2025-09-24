@@ -1,12 +1,12 @@
-import type { JSONSchema7 } from 'json-schema'
 import type {
   SchemaDefaults,
   Style,
   StyleOptions,
-} from '../../open-peeps/types'
+  StyleSchema,
+} from '../types'
 import { schema } from '../schema'
 
-export function defaults(schema: JSONSchema7): SchemaDefaults {
+export function defaults(schema: StyleSchema): SchemaDefaults {
   const result: SchemaDefaults = {}
   const props = schema.properties ?? {}
 

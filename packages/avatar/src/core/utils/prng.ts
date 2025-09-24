@@ -1,4 +1,4 @@
-import type { Prng } from '../../open-peeps/types'
+import type { Prng } from '../types'
 
 const MIN = -2147483648
 const MAX = 2147483647
@@ -43,10 +43,9 @@ export function create(seed: string = ''): Prng {
     integer(min: number, max: number) {
       return integer(min, max)
     },
-    pick<T>(arr: T[], fallback?: T): T | undefined {
-      if (arr.length === 0) {
+    pick<T>(arr: T[], fallback?: T) {
+      if (!Array.isArray(arr) || arr.length === 0) {
         next()
-
         return fallback
       }
 

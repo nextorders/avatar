@@ -1,4 +1,4 @@
-import type { BackgroundType, StyleCreateResult } from '../../open-peeps/types'
+import type { BackgroundType, StyleCreateResult } from '../types'
 import { xml } from './escape'
 import { create as createPrng } from './prng'
 

@@ -1,15 +1,16 @@
+import type { StyleCreate } from '../core/types'
+import type { OpenPeepsOptions } from './types'
+import { xml } from '../core/utils/escape'
+import { getColors } from './utils/getColors'
+import { getComponents } from './utils/getComponents'
+
 /*!
  * Design "Open Peeps" by Pablo Stanley licensed under CC0 1.0. / Remix of the original.
  * Source: https://www.openpeeps.com/
  * Homepage: https://twitter.com/pablostanley
  * License: https://creativecommons.org/publicdomain/zero/1.0/
  */
-import type { Options, StyleCreate } from './types'
-import { xml } from '../core/utils/escape'
-import { getColors } from './utils/getColors'
-import { getComponents } from './utils/getComponents'
-
-export const create: StyleCreate<Options> = ({ prng, options }) => {
+export const create: StyleCreate<OpenPeepsOptions> = ({ prng, options }) => {
   const components = getComponents({ prng, options })
   const colors = getColors({ prng, options })
 
@@ -40,4 +41,4 @@ export const create: StyleCreate<Options> = ({ prng, options }) => {
 }
 
 export { schema } from './schema'
-export type { Options } from './types'
+export type { OpenPeepsOptions } from './types'

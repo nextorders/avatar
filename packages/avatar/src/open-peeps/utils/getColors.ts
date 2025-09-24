@@ -1,19 +1,20 @@
-import type { ColorPickCollection, Options, Prng } from '../types'
+import type { Prng } from '../../core/types'
+import type { ColorPickCollection, OpenPeepsOptions } from '../types'
 import { convertColor } from './convertColor'
 
 type Props = {
   prng: Prng
-  options: Options
+  options: OpenPeepsOptions
 }
 
 export function getColors({ prng, options }: Props): ColorPickCollection {
   return {
-    skin: convertColor(prng.pick(options.skinColor ?? [], 'transparent')),
+    skin: convertColor(prng.pick(options.skinColor ?? []) ?? 'transparent'),
     clothing: convertColor(
-      prng.pick(options.clothingColor ?? [], 'transparent'),
+      prng.pick(options.clothingColor ?? []) ?? 'transparent',
     ),
     headContrast: convertColor(
-      prng.pick(options.headContrastColor ?? [], 'transparent'),
+      prng.pick(options.headContrastColor ?? []) ?? 'transparent',
     ),
   }
 }

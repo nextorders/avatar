@@ -1,9 +1,10 @@
-import type { ComponentPickCollection, Options, Prng } from '../types'
+import type { Prng } from '../../core/types'
+import type { ComponentPickCollection, OpenPeepsOptions } from '../types'
 import { pickComponent } from './pickComponent'
 
 type Props = {
   prng: Prng
-  options: Options
+  options: OpenPeepsOptions
 }
 
 export function getComponents({
