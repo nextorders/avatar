@@ -120,10 +120,10 @@ export interface OpenPeepsOptions {
 
 export type ColorPickCollection = Record<string, string>
 
+type ComponentGroupItem = (colors: ColorPickCollection) => string
+
 export type ComponentGroup = Record<string, ComponentGroupItem>
 export type ComponentGroupCollectionKey = 'accessories' | 'face' | 'facialHair' | 'head' | 'mask'
-export type ComponentGroupCollection = Record<ComponentGroupCollectionKey, ComponentGroup>
-export type ComponentGroupItem = (colors: ColorPickCollection) => string
 export type ComponentPickCollection = Record<string, ComponentPick>
 export type ComponentPick
   = | {

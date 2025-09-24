@@ -6,7 +6,7 @@ import type {
 } from '../types'
 import { schema } from '../schema'
 
-export function defaults(schema: StyleSchema): SchemaDefaults {
+function defaults(schema: StyleSchema): SchemaDefaults {
   const result: SchemaDefaults = {}
   const props = schema.properties ?? {}
 

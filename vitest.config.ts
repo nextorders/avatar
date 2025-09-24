@@ -9,8 +9,6 @@ export default defineConfig({
           include: [
             'packages/**/test/unit/**/*.{test,spec}.ts',
             'packages/**/test/**/*.unit.{test,spec}.ts',
-            'apps/**/test/unit/**/*.{test,spec}.ts',
-            'apps/**/test/**/*.unit.{test,spec}.ts',
           ],
           name: 'unit',
           environment: 'node',
@@ -22,8 +20,6 @@ export default defineConfig({
           include: [
             'packages/**/test/browser/**/*.{test,spec}.ts',
             'packages/**/test/**/*.browser.{test,spec}.ts',
-            'apps/**/test/browser/**/*.{test,spec}.ts',
-            'apps/**/test/**/*.browser.{test,spec}.ts',
           ],
           name: 'browser',
           browser: {

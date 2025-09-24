@@ -46,7 +46,7 @@ export type StyleSchema = JSONSchema7
 
 export type StyleOptions<O extends object> = Partial<O & Options>
 
-export interface StyleCreateProps<O extends object> {
+interface StyleCreateProps<O extends object> {
   prng: Prng
   options: StyleOptions<O>
 }
@@ -55,7 +55,7 @@ export type StyleCreate<O extends object> = (
   props: StyleCreateProps<O>,
 ) => StyleCreateResult
 
-export interface StyleCreateResultAttributes {
+interface StyleCreateResultAttributes {
   viewBox: string
   [key: string]: string
 }
