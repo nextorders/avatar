@@ -15,7 +15,7 @@
   "scripts": {
     "build": "pnpm -r run build",
     "build:types": "vue-tsc --emitDeclarationOnly",
-    "release": "bumpp --execute=\"npm run release:prepare\" --all",
+    "release": "bumpp --execute=\"npm run release:prepare\" --recursive",
     "release:prepare": "npm run build:types",
     "publish:ci": "tsx scripts/publish.ts",
     "lint": "eslint .",
