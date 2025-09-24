@@ -53,18 +53,13 @@ export function createAvatar<O extends object>(
     )
   }
 
-  if (
-    backgroundType === 'randomGradientLinear'
-    || (primaryBackgroundColor !== 'transparent' && secondaryBackgroundColor !== 'transparent')
-  ) {
-    result.body = svgUtils.addBackground(
-      result,
-      primaryBackgroundColor,
-      secondaryBackgroundColor,
-      backgroundType,
-      backgroundRotation,
-    )
-  }
+  result.body = svgUtils.addBackground(
+    result,
+    primaryBackgroundColor,
+    secondaryBackgroundColor,
+    backgroundType,
+    backgroundRotation,
+  )
 
   if (options.radius || options.clip) {
     result.body = svgUtils.addViewboxMask(result, options.radius ?? 0)

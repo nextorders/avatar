@@ -28,7 +28,11 @@ export function addBackground(
 ) {
   const { width, height, x, y } = getViewBox(result)
 
-  const solidBackground = `<rect fill="${primaryColor}" width="${width}" height="${height}" x="${x}" y="${y}" />`
+  function getSolid() {
+    return (
+      `<rect fill="${primaryColor}" width="${width}" height="${height}" x="${x}" y="${y}" />`
+    )
+  }
 
   function getGradient() {
     if (type === 'randomGradientLinear') {
@@ -50,11 +54,14 @@ export function addBackground(
 
   switch (type) {
     case 'solid':
-      return solidBackground + result.body
+      return getSolid() + result.body
 
     case 'gradientLinear':
     case 'randomGradientLinear':
       return getGradient() + result.body
+
+    default:
+      return result.body
   }
 }
 

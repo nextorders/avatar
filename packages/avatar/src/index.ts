@@ -37,6 +37,7 @@ function getOptions(data: AvatarOptions): Partial<Options> {
     translateX: -5,
     accessoriesProbability: 20,
     maskProbability: 0,
+    backgroundType: ['randomGradientLinear'],
     face: getPossibleFaces(data.emotion ?? null),
     accessories: getPossibleAccessories(),
     skinColor: getPossibleSkinColors(),
