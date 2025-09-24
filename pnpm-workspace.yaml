@@ -7,10 +7,11 @@ catalogs:
     '@antfu/eslint-config': ^5.4.1
     '@commitlint/cli': ^19.8.1
     '@commitlint/config-conventional': ^19.8.1
-    changelogen-monorepo: ^0.5.0
+    bumpp: ^10.2.3
     eslint: ^9.36.0
     husky: ^9.1.7
     lint-staged: ^16.2.0
+    tsx: ^4.20.5
     typescript: ^5.9.2
     unbuild: ^3.6.1
     vite: ^7.1.7
@@ -25,3 +26,8 @@ catalogs:
 ignoredBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
+
+shamefullyHoist: true
+shellEmulator: true
+sideEffectsCache: false
+strictPeerDependencies: false

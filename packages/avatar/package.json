@@ -1,7 +1,7 @@
 {
   "name": "@nextorders/avatar",
   "type": "module",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "description": "A toolkit for generating personalized SVG avatars",
   "license": "MIT",
   "homepage": "https://avatar.nextorders.ru",
@@ -26,7 +26,8 @@
     "node": ">=18.12.0"
   },
   "scripts": {
-    "prepack": "unbuild"
+    "build": "unbuild",
+    "prepack": "pnpm run build"
   },
   "dependencies": {
     "@dicebear/core": "9.2.4",
