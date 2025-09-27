@@ -32,7 +32,6 @@ export interface Options {
   translateX?: number
   translateY?: number
   clip?: boolean
-  randomizeIds?: boolean
 }
 
 export type SchemaDefaults = Record<string, unknown>

@@ -1,7 +1,6 @@
 import type { BackgroundType, StyleCreateResult } from '../types'
 import { generateHarmoniousBackgroundColors } from './color'
 import { xml } from './escape'
-import { create as createPrng } from './prng'
 
 export function getViewBox(result: StyleCreateResult) {
   const viewBox = result.attributes.viewBox.split(' ')
@@ -130,18 +129,4 @@ export function createAttrString(result: StyleCreateResult): string {
   return Object.keys(attributes)
     .map((attr) => `${xml(attr)}="${xml(attributes[attr])}"`)
     .join(' ')
-}
-
-export function randomizeIds(result: StyleCreateResult): string {
-  const prng = createPrng(Math.random().toString())
-  const ids: Record<string, string> = {}
-
-  return result.body.replace(
-    /(id="|url\(#)([\w-]+)([")])/gi,
-    (_, m1, m2, m3) => {
-      ids[m2] = ids[m2] || prng.string(8)
-
-      return `${m1}${ids[m2]}${m3}`
-    },
-  )
 }

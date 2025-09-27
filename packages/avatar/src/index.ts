@@ -30,13 +30,16 @@ export function createAvatar(options: AvatarOptions): string {
 }
 
 function getOptions(data: AvatarOptions): Partial<Options> {
+  if (!data.seed) {
+    throw new Error('seed is required')
+  }
+
   return {
     seed: data.seed,
     size: 256,
     scale: 80,
     translateX: -5,
     accessoriesProbability: 20,
-    maskProbability: 0,
     backgroundType: ['randomGradientLinear'],
     face: getPossibleFaces(data.emotion ?? null),
     accessories: getPossibleAccessories(),

@@ -65,11 +65,6 @@ export function createAvatar<O extends object>(
     result.body = svgUtils.addViewboxMask(result, options.radius ?? 0)
   }
 
-  if (options.randomizeIds) {
-    // Reduces the occurrence of ID collisions when rendering multiple avatars on one HTML page.
-    result.body = svgUtils.randomizeIds(result)
-  }
-
   const attributes = svgUtils.createAttrString(result)
 
   const svg = `<svg ${attributes}>${result.body}</svg>`

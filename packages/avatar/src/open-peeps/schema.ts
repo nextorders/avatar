@@ -294,20 +294,6 @@ export const schema: StyleSchema = {
         'c93305',
       ],
     },
-    mask: {
-      type: 'array',
-      items: {
-        type: 'string',
-        enum: ['medicalMask', 'respirator'],
-      },
-      default: ['medicalMask', 'respirator'],
-    },
-    maskProbability: {
-      type: 'integer',
-      minimum: 0,
-      maximum: 100,
-      default: 5,
-    },
     skinColor: {
       type: 'array',
       items: {

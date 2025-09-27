@@ -73,9 +73,5 @@ export const schema: StyleSchema = {
       type: 'boolean',
       default: true,
     },
-    randomizeIds: {
-      type: 'boolean',
-      default: false,
-    },
   },
 }

@@ -7,8 +7,8 @@ export default defineConfig({
         extends: true,
         test: {
           include: [
-            'packages/**/test/unit/**/*.{test,spec}.ts',
-            'packages/**/test/**/*.unit.{test,spec}.ts',
+            '**/test/unit/**/*.{test,spec}.ts',
+            '**/test/**/*.unit.{test,spec}.ts',
           ],
           name: 'unit',
           environment: 'node',
@@ -18,8 +18,8 @@ export default defineConfig({
         extends: true,
         test: {
           include: [
-            'packages/**/test/browser/**/*.{test,spec}.ts',
-            'packages/**/test/**/*.browser.{test,spec}.ts',
+            '**/test/browser/**/*.{test,spec}.ts',
+            '**/test/**/*.browser.{test,spec}.ts',
           ],
           name: 'browser',
           browser: {

@@ -100,8 +100,6 @@ export interface OpenPeepsOptions {
     | 'moustache9'
   )[]
   facialHairProbability?: number
-  mask?: ('medicalMask' | 'respirator')[]
-  maskProbability?: number
   accessories?: (
     | 'eyepatch'
     | 'glasses'
@@ -123,7 +121,7 @@ export type ColorPickCollection = Record<string, string>
 type ComponentGroupItem = (colors: ColorPickCollection) => string
 
 export type ComponentGroup = Record<string, ComponentGroupItem>
-export type ComponentGroupCollectionKey = 'accessories' | 'face' | 'facialHair' | 'head' | 'mask'
+export type ComponentGroupCollectionKey = 'accessories' | 'face' | 'facialHair' | 'head'
 export type ComponentPickCollection = Record<string, ComponentPick>
 export type ComponentPick
   = | {

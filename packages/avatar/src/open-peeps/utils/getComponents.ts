@@ -26,11 +26,6 @@ export function getComponents({
     group: 'facialHair',
     values: options.facialHair,
   })
-  const maskComponent = pickComponent({
-    prng,
-    group: 'mask',
-    values: options.mask,
-  })
   const accessoriesComponent = pickComponent({
     prng,
     group: 'accessories',
@@ -43,7 +38,6 @@ export function getComponents({
     facialHair: prng.bool(options.facialHairProbability)
       ? facialHairComponent
       : undefined,
-    mask: prng.bool(options.maskProbability) ? maskComponent : undefined,
     accessories: prng.bool(options.accessoriesProbability)
       ? accessoriesComponent
       : undefined,
