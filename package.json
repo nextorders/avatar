@@ -26,8 +26,7 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "check:full": "pnpm run lint:fix && pnpm run typecheck && pnpm vitest run",
-    "prepare": "husky",
-    "prepare:cert": "mkdir -p .cert && mkcert -key-file ./.cert/localhost-key.pem -cert-file ./.cert/localhost.pem 'app.local'"
+    "prepare": "husky"
   },
   "devDependencies": {
     "@antfu/eslint-config": "catalog:dev",
