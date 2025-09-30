@@ -31,7 +31,8 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "prepack": "pnpm run build"
+    "prepack": "pnpm run build",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@types/json-schema": "7.0.15",
