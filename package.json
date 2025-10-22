@@ -9,7 +9,7 @@
     "url": "git+https://github.com/nextorders/avatar.git"
   },
   "engines": {
-    "node": ">=22.18.0",
+    "node": ">=22.21.0",
     "pnpm": ">=10.18.3"
   },
   "scripts": {

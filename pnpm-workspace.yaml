@@ -10,13 +10,13 @@ catalogs:
     bumpp: ^10.3.1
     eslint: ^9.38.0
     husky: ^9.1.7
-    lint-staged: ^16.2.4
+    lint-staged: ^16.2.5
     typescript: ^5.9.3
     unbuild: ^3.6.1
   test:
     '@vitest/browser': ^3.2.4
     '@vitest/coverage-v8': ^3.2.4
-    playwright: ^1.55.1
+    playwright: ^1.56.1
     vitest: ^3.2.4
 
 ignoredBuiltDependencies:
@@ -29,5 +29,4 @@ sideEffectsCache: false
 strictPeerDependencies: false
 publicHoistPattern:
   - vitest
-  - vitest-browser-vue
   - vite-node
