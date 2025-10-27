@@ -4,7 +4,7 @@ packages:
 
 catalogs:
   dev:
-    '@antfu/eslint-config': ^6.0.0
+    '@antfu/eslint-config': ^6.1.0
     '@commitlint/cli': ^20.1.0
     '@commitlint/config-conventional': ^20.0.0
     bumpp: ^10.3.1
@@ -14,10 +14,10 @@ catalogs:
     typescript: ^5.9.3
     unbuild: ^3.6.1
   test:
-    '@vitest/browser': ^3.2.4
-    '@vitest/coverage-v8': ^3.2.4
+    '@vitest/browser-playwright': ^4.0.3
+    '@vitest/coverage-v8': ^4.0.3
     playwright: ^1.56.1
-    vitest: ^3.2.4
+    vitest: ^4.0.3
 
 ignoredBuiltDependencies:
   - '@parcel/watcher'
