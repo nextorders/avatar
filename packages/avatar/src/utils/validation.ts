@@ -1,7 +1,10 @@
 import type { AvatarOptions } from '../types'
 
 export function validateAvatarOptions(options: AvatarOptions): void {
-  if (!options?.seed || options.seed === '' || typeof options.seed !== 'string') {
+  if (!options?.seed || typeof options.seed !== 'string') {
+    throw new Error('seed is required')
+  }
+  if (options?.seed?.trim() === '') {
     throw new Error('seed is required')
   }
 

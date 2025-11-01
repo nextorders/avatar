@@ -27,7 +27,7 @@ describe('edge cases', () => {
   })
 
   it('should handle whitespace-only seeds', () => {
-    expect(() => createAvatar({ seed: '   ' })).not.toThrow()
+    expect(() => createAvatar({ seed: '   ' })).toThrow()
   })
 
   it('should generate different results for similar seeds', () => {
