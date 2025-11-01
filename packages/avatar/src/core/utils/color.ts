@@ -1,5 +1,5 @@
 import type { BackgroundType, Prng } from '../types'
-import { getRandInteger } from '../../random'
+import { getRandInteger } from '../../utils/random'
 
 export function convertColor(color: string): string {
   return color === 'transparent' ? color : `#${color}`

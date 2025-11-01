@@ -1,6 +1,17 @@
 export interface OpenPeepsOptions {
-  head?: (
-    | 'afro'
+  head?: Head[]
+  face?: FaceEmotion[]
+  facialHair?: FacialHair[]
+  facialHairProbability?: number
+  accessories?: Accessories[]
+  accessoriesProbability?: number
+  skinColor?: string[]
+  clothingColor?: string[]
+  headContrastColor?: string[]
+}
+
+export type Head
+  = | 'afro'
     | 'bangs'
     | 'bangs2'
     | 'bantuKnots'
@@ -48,9 +59,27 @@ export interface OpenPeepsOptions {
     | 'turban'
     | 'twists'
     | 'twists2'
-  )[]
-  face?: (
-    | 'angryWithFang'
+
+export type FacialHair
+  = | 'chin'
+    | 'full'
+    | 'full2'
+    | 'full3'
+    | 'full4'
+    | 'goatee1'
+    | 'goatee2'
+    | 'moustache1'
+    | 'moustache2'
+    | 'moustache3'
+    | 'moustache4'
+    | 'moustache5'
+    | 'moustache6'
+    | 'moustache7'
+    | 'moustache8'
+    | 'moustache9'
+
+export type FaceEmotion
+  = | 'angryWithFang'
     | 'awe'
     | 'blank'
     | 'calm'
@@ -80,28 +109,9 @@ export interface OpenPeepsOptions {
     | 'suspicious'
     | 'tired'
     | 'veryAngry'
-  )[]
-  facialHair?: (
-    | 'chin'
-    | 'full'
-    | 'full2'
-    | 'full3'
-    | 'full4'
-    | 'goatee1'
-    | 'goatee2'
-    | 'moustache1'
-    | 'moustache2'
-    | 'moustache3'
-    | 'moustache4'
-    | 'moustache5'
-    | 'moustache6'
-    | 'moustache7'
-    | 'moustache8'
-    | 'moustache9'
-  )[]
-  facialHairProbability?: number
-  accessories?: (
-    | 'eyepatch'
+
+export type Accessories
+  = | 'eyepatch'
     | 'glasses'
     | 'glasses2'
     | 'glasses3'
@@ -109,12 +119,6 @@ export interface OpenPeepsOptions {
     | 'glasses5'
     | 'sunglasses'
     | 'sunglasses2'
-  )[]
-  accessoriesProbability?: number
-  skinColor?: string[]
-  clothingColor?: string[]
-  headContrastColor?: string[]
-}
 
 export type ColorPickCollection = Record<string, string>
 
