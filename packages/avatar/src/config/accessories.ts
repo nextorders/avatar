@@ -8,4 +8,4 @@ export const ALL_ACCESSORIES = [
   'glasses5',
   'sunglasses',
   'sunglasses2',
-] satisfies Accessories[]
+] satisfies Partial<Accessories>[]

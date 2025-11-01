@@ -2,7 +2,7 @@ import type { ClothingColor, Gender, PossibleFace } from '../types'
 import { CLOTHING_COLORS, DEFAULT_CLOTHING_COLOR } from '../config/clothing'
 import { ALL_EMOTIONS, EMOTION_MAPPING } from '../config/emotions'
 import { FEMALE_CONFIG, MALE_CONFIG } from '../config/gender'
-import { getRandInteger } from '../random'
+import { getRandInteger } from './random'
 
 export function selectFaceEmotion(emotion?: number): PossibleFace[] {
   if (!emotion || emotion < 1 || emotion > 10) {

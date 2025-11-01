@@ -13,7 +13,7 @@ export const EMOTION_MAPPING = {
   10: 'lovingGrin1',
 } as const
 
-export const ALL_EMOTIONS: PossibleFace[] = [
+export const ALL_EMOTIONS = [
   ...Object.values(EMOTION_MAPPING),
   'suspicious',
   'contempt',
@@ -31,4 +31,4 @@ export const ALL_EMOTIONS: PossibleFace[] = [
   'cheeky',
   'blank',
   'awe',
-] as const
+] satisfies Partial<PossibleFace>[]
