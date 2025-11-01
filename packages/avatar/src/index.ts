@@ -8,8 +8,14 @@ import { selectClothingColor, selectFaceEmotion, selectGenderConfig } from './ut
 import { validateAvatarOptions } from './utils/validation'
 
 /**
- * Create an avatar
- * @returns SVG string
+ * Creates a deterministic SVG avatar based on the provided options
+ * @param options - Avatar generation options
+ * @param options.seed - Unique identifier for deterministic generation
+ * @param options.gender - Avatar gender
+ * @param options.clothing - Clothing color
+ * @param options.emotion - Avatar emotion
+ * @returns SVG string representation of the avatar
+ * @throws {Error} When options are invalid
  */
 export function createAvatar(options: AvatarOptions): string {
   validateAvatarOptions(options)

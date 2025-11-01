@@ -1,10 +1,11 @@
-import type { ClothingColor, Gender, PossibleFace } from '../types'
+import type { FaceEmotion } from '../open-peeps/types'
+import type { ClothingColor, Gender } from '../types'
 import { CLOTHING_COLORS, DEFAULT_CLOTHING_COLOR } from '../config/clothing'
 import { ALL_EMOTIONS, EMOTION_MAPPING } from '../config/emotions'
 import { FEMALE_CONFIG, MALE_CONFIG } from '../config/gender'
 import { getRandInteger } from './random'
 
-export function selectFaceEmotion(emotion?: number): PossibleFace[] {
+export function selectFaceEmotion(emotion?: number): FaceEmotion[] {
   if (!emotion || emotion < 1 || emotion > 10) {
     return ALL_EMOTIONS
   }

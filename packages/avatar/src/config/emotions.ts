@@ -1,4 +1,4 @@
-import type { PossibleFace } from '../types'
+import type { FaceEmotion } from '../open-peeps/types'
 
 export const EMOTION_MAPPING = {
   1: 'rage',
@@ -12,6 +12,8 @@ export const EMOTION_MAPPING = {
   9: 'eatingHappy',
   10: 'lovingGrin1',
 } as const
+
+export type EmotionNumber = keyof typeof EMOTION_MAPPING
 
 export const ALL_EMOTIONS = [
   ...Object.values(EMOTION_MAPPING),
@@ -31,4 +33,4 @@ export const ALL_EMOTIONS = [
   'cheeky',
   'blank',
   'awe',
-] satisfies Partial<PossibleFace>[]
+] satisfies Partial<FaceEmotion>[]
