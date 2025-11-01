@@ -11,7 +11,7 @@ describe('selectors', () => {
 
     it('should return default when undefined', () => {
       const result = selectGenderConfig(undefined)
-      expect(result).toBeOneOf([MALE_CONFIG, FEMALE_CONFIG])
+      expect([MALE_CONFIG, FEMALE_CONFIG]).toContain(result)
     })
   })
 
