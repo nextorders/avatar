@@ -4,20 +4,20 @@ packages:
 
 catalogs:
   dev:
-    '@antfu/eslint-config': ^6.1.0
+    '@antfu/eslint-config': ^6.2.0
     '@commitlint/cli': ^20.1.0
     '@commitlint/config-conventional': ^20.0.0
     bumpp: ^10.3.1
-    eslint: ^9.38.0
+    eslint: ^9.39.0
     husky: ^9.1.7
     lint-staged: ^16.2.6
     typescript: ^5.9.3
     unbuild: ^3.6.1
   test:
-    '@vitest/browser-playwright': ^4.0.3
-    '@vitest/coverage-v8': ^4.0.3
+    '@vitest/browser-playwright': ^4.0.6
+    '@vitest/coverage-v8': ^4.0.6
     playwright: ^1.56.1
-    vitest: ^4.0.3
+    vitest: ^4.0.6
 
 ignoredBuiltDependencies:
   - '@parcel/watcher'
