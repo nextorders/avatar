@@ -1,32 +1,36 @@
+publicHoistPattern:
+  - vitest
+  - vite-node
+
+shamefullyHoist: true
+shellEmulator: true
+trustPolicy: no-downgrade
+
 packages:
   - docs
   - packages/*
 
 catalogs:
   dev:
-    '@antfu/eslint-config': ^6.2.0
-    '@commitlint/cli': ^20.1.0
-    '@commitlint/config-conventional': ^20.0.0
-    bumpp: ^10.3.2
-    eslint: ^9.39.1
+    '@antfu/eslint-config': ^7.1.0
+    '@commitlint/cli': ^20.3.1
+    '@commitlint/config-conventional': ^20.3.1
+    '@types/json-schema': ^7.0.15
+    bumpp: ^10.4.0
+    eslint: ^9.39.2
     husky: ^9.1.7
     lint-staged: ^16.2.7
     typescript: ^5.9.3
     unbuild: ^3.6.1
   test:
-    '@vitest/browser-playwright': ^4.0.14
-    '@vitest/coverage-v8': ^4.0.14
+    '@vitest/browser-playwright': ^4.0.17
+    '@vitest/coverage-v8': ^4.0.17
     playwright: ^1.57.0
-    vitest: ^4.0.14
+    vitest: ^4.0.17
 
 ignoredBuiltDependencies:
   - '@parcel/watcher'
   - esbuild
 
-shamefullyHoist: true
-shellEmulator: true
 sideEffectsCache: false
 strictPeerDependencies: false
-publicHoistPattern:
-  - vitest
-  - vite-node
