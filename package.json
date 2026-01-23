@@ -2,15 +2,15 @@
   "name": "@nextorders/avatar-monorepo",
   "version": "1.0.3",
   "private": true,
-  "packageManager": "pnpm@10.24.0",
+  "packageManager": "pnpm@10.28.1",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nextorders/avatar.git"
   },
   "engines": {
-    "node": ">=24.11.1",
-    "pnpm": ">=10.24.0"
+    "node": ">=24.13.0",
+    "pnpm": ">=10.28.1"
   },
   "scripts": {
     "build": "pnpm -r run build",

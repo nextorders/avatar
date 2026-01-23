@@ -12,7 +12,7 @@ packages:
 
 catalogs:
   dev:
-    '@antfu/eslint-config': ^7.1.0
+    '@antfu/eslint-config': ^7.2.0
     '@commitlint/cli': ^20.3.1
     '@commitlint/config-conventional': ^20.3.1
     '@types/json-schema': ^7.0.15
@@ -23,10 +23,10 @@ catalogs:
     typescript: ^5.9.3
     unbuild: ^3.6.1
   test:
-    '@vitest/browser-playwright': ^4.0.17
-    '@vitest/coverage-v8': ^4.0.17
+    '@vitest/browser-playwright': ^4.0.18
+    '@vitest/coverage-v8': ^4.0.18
     playwright: ^1.57.0
-    vitest: ^4.0.17
+    vitest: ^4.0.18
 
 ignoredBuiltDependencies:
   - '@parcel/watcher'
