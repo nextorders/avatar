@@ -16,7 +16,7 @@ catalogs:
     '@commitlint/cli': ^20.4.1
     '@commitlint/config-conventional': ^20.4.1
     '@types/json-schema': ^7.0.15
-    bumpp: ^10.4.1
+    bumpp: ^11.1.0
     eslint: ^9.39.2
     husky: ^9.1.7
     lint-staged: ^16.2.7
