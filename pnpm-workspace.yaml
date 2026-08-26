@@ -20,7 +20,7 @@ catalogs:
     eslint: ^9.39.2
     husky: ^9.1.7
     lint-staged: ^16.2.7
-    typescript: ^5.9.3
+    typescript: ^7.0.2
     unbuild: ^3.6.1
   test:
     '@vitest/browser-playwright': ^4.0.18
